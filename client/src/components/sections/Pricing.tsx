@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { CheckIcon, XIcon } from '@/components/ui/icons';
 import { cn } from '@/lib/utils';
+import { ScrollAnimation } from '@/components/ui/scroll-animation';
 
 interface PlanFeature {
   feature: string;
@@ -119,54 +120,64 @@ const Pricing = () => {
   return (
     <section id="pricing" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">Simple, transparent pricing</h2>
-          <p className="mt-4 text-xl text-slate-600">Choose the plan that's right for you and your team</p>
-        </div>
+        <ScrollAnimation variant="fadeInUp">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">Simple, transparent pricing</h2>
+            <p className="mt-4 text-xl text-slate-600">Choose the plan that's right for you and your team</p>
+          </div>
+        </ScrollAnimation>
         
         <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <PricingPlan
-            name="Starter"
-            description="Perfect for individual designers"
-            price="$12"
-            period="/month"
-            features={starterFeatures}
-            buttonText="Get started"
-          />
+          <ScrollAnimation variant="fadeInUp" delay={0.1}>
+            <PricingPlan
+              name="Starter"
+              description="Perfect for individual designers"
+              price="$12"
+              period="/month"
+              features={starterFeatures}
+              buttonText="Get started"
+            />
+          </ScrollAnimation>
           
-          <PricingPlan
-            name="Pro"
-            description="For professional designers"
-            price="$29"
-            period="/month"
-            features={proFeatures}
-            popular={true}
-            buttonText="Get started"
-          />
+          <ScrollAnimation variant="fadeInUp">
+            <PricingPlan
+              name="Pro"
+              description="For professional designers"
+              price="$29"
+              period="/month"
+              features={proFeatures}
+              popular={true}
+              buttonText="Get started"
+            />
+          </ScrollAnimation>
           
-          <PricingPlan
-            name="Enterprise"
-            description="For organizations and agencies"
-            price="$79"
-            period="/month"
-            features={enterpriseFeatures}
-            buttonText="Contact sales"
-          />
+          <ScrollAnimation variant="fadeInUp" delay={0.2}>
+            <PricingPlan
+              name="Enterprise"
+              description="For organizations and agencies"
+              price="$79"
+              period="/month"
+              features={enterpriseFeatures}
+              buttonText="Contact sales"
+            />
+          </ScrollAnimation>
         </div>
         
-        <div className="mt-12 bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">Need a custom plan?</h3>
-              <p className="mt-2 text-slate-600">Contact our sales team for enterprise pricing and custom solutions.</p>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <Button className="bg-slate-900 hover:bg-slate-800">
-                Contact sales
-              </Button>
+        <ScrollAnimation variant="fadeInUp" delay={0.3}>
+          <div className="mt-12 bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900">Need a custom plan?</h3>
+                <p className="mt-2 text-slate-600">Contact our sales team for enterprise pricing and custom solutions.</p>
+              </div>
+              <div className="mt-4 md:mt-0">
+                <Button className="bg-slate-900 hover:bg-slate-800">
+                  Contact sales
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion';
+import { ScrollAnimation } from '@/components/ui/scroll-animation';
 
 interface FAQItemProps {
   question: string;
@@ -38,26 +39,29 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">Frequently asked questions</h2>
-          <p className="mt-4 text-xl text-slate-600">Everything you need to know about FigPro</p>
-        </div>
+        <ScrollAnimation variant="fadeInUp">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">Frequently asked questions</h2>
+            <p className="mt-4 text-xl text-slate-600">Everything you need to know about FigPro</p>
+          </div>
+        </ScrollAnimation>
         
         <div className="mt-16 max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-6">
             {faqItems.map((item, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-white rounded-lg shadow-sm border border-slate-100 px-6 overflow-hidden"
-              >
-                <AccordionTrigger className="text-lg font-medium text-slate-900 py-4">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 pb-4">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <ScrollAnimation key={index} variant="fadeInUp" delay={0.1 * index}>
+                <AccordionItem 
+                  value={`item-${index}`}
+                  className="bg-white rounded-lg shadow-sm border border-slate-100 px-6 overflow-hidden"
+                >
+                  <AccordionTrigger className="text-lg font-medium text-slate-900 py-4">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-slate-600 pb-4">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </ScrollAnimation>
             ))}
           </Accordion>
         </div>

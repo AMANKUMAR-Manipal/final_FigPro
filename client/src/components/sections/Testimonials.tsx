@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollAnimation } from '@/components/ui/scroll-animation';
 
 // SVG-based testimonial avatar
 const TestimonialAvatar = ({ index }: { index: number }) => {
@@ -77,14 +78,18 @@ const Testimonials = () => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">What designers are saying</h2>
-          <p className="mt-4 text-xl text-slate-600">Hear from professionals who use FigPro every day</p>
-        </div>
+        <ScrollAnimation variant="fadeInUp">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">What designers are saying</h2>
+            <p className="mt-4 text-xl text-slate-600">Hear from professionals who use FigPro every day</p>
+          </div>
+        </ScrollAnimation>
         
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Testimonial key={index} {...testimonial} />
+            <ScrollAnimation key={index} variant="fadeInUp" delay={0.1 * (index + 1)}>
+              <Testimonial {...testimonial} />
+            </ScrollAnimation>
           ))}
         </div>
       </div>

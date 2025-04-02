@@ -7,6 +7,7 @@ import {
   DeviceMobileIcon, 
   ExportIcon 
 } from '@/components/ui/icons';
+import { ScrollAnimation } from '@/components/ui/scroll-animation';
 
 interface ShowcaseFeatureProps {
   icon: React.ReactNode;
@@ -121,26 +122,32 @@ const Showcase = () => {
   return (
     <section id="showcase" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">Powerful interface, intuitive design</h2>
-          <p className="mt-4 text-xl text-slate-600">FigPro's thoughtfully crafted interface makes complex design tasks simple</p>
-        </div>
+        <ScrollAnimation variant="fadeInUp">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">Powerful interface, intuitive design</h2>
+            <p className="mt-4 text-xl text-slate-600">FigPro's thoughtfully crafted interface makes complex design tasks simple</p>
+          </div>
+        </ScrollAnimation>
         
         <div className="mt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="relative">
-              <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-                <InterfaceScreenshot1 />
+            <ScrollAnimation variant="fadeInLeft" delay={0.2}>
+              <div className="relative">
+                <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+                  <InterfaceScreenshot1 />
+                </div>
+                <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
+                  <div className="text-sm font-medium text-slate-900">Smart Components Panel</div>
+                  <div className="text-xs text-slate-500">Drag & drop interface with AI-powered suggestions</div>
+                </div>
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
-                <div className="text-sm font-medium text-slate-900">Smart Components Panel</div>
-                <div className="text-xs text-slate-500">Drag & drop interface with AI-powered suggestions</div>
-              </div>
-            </div>
+            </ScrollAnimation>
             
             <div className="flex flex-col justify-center space-y-8">
               {leftFeatures.map((feature, index) => (
-                <ShowcaseFeature key={index} {...feature} />
+                <ScrollAnimation key={index} variant="fadeInRight" delay={0.1 * (index + 1)}>
+                  <ShowcaseFeature {...feature} />
+                </ScrollAnimation>
               ))}
             </div>
           </div>
@@ -148,19 +155,23 @@ const Showcase = () => {
           <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center space-y-8 order-2 lg:order-1">
               {rightFeatures.map((feature, index) => (
-                <ShowcaseFeature key={index} {...feature} />
+                <ScrollAnimation key={index} variant="fadeInLeft" delay={0.1 * (index + 1)}>
+                  <ShowcaseFeature {...feature} />
+                </ScrollAnimation>
               ))}
             </div>
             
-            <div className="relative order-1 lg:order-2">
-              <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-                <InterfaceScreenshot2 />
+            <ScrollAnimation variant="fadeInRight" delay={0.2} className="order-1 lg:order-2">
+              <div className="relative">
+                <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+                  <InterfaceScreenshot2 />
+                </div>
+                <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg">
+                  <div className="text-sm font-medium text-slate-900">Accessibility Toolkit</div>
+                  <div className="text-xs text-slate-500">Real-time accessibility checks and suggestions</div>
+                </div>
               </div>
-              <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg">
-                <div className="text-sm font-medium text-slate-900">Accessibility Toolkit</div>
-                <div className="text-xs text-slate-500">Real-time accessibility checks and suggestions</div>
-              </div>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </div>
