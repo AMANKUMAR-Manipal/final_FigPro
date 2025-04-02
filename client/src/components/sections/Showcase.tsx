@@ -8,8 +8,6 @@ import {
   ExportIcon 
 } from '@/components/ui/icons';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
-import showcaseImage from '@/assets/images/showcase.svg';
-import figproInterface from '@/assets/images/figpro-interface.png';
 
 interface ShowcaseFeatureProps {
   icon: React.ReactNode;
@@ -34,8 +32,6 @@ const ShowcaseFeature: React.FC<ShowcaseFeatureProps> = ({ icon, title, descript
     </div>
   </div>
 );
-
-
 
 const leftFeatures: ShowcaseFeatureProps[] = [
   {
@@ -97,19 +93,7 @@ const Showcase = () => {
         </ScrollAnimation>
         
         <div className="mt-16">
-          <ScrollAnimation variant="fadeIn" delay={0.2}>
-            <div className="relative mb-16 max-w-4xl mx-auto">
-              <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-                <img src={figproInterface} alt="FigPro Professional Design Interface" className="w-full h-auto" />
-              </div>
-              <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
-                <div className="text-sm font-medium text-slate-900">Professional Design Interface</div>
-                <div className="text-xs text-slate-500">Complete toolset for modern design workflows</div>
-              </div>
-            </div>
-          </ScrollAnimation>
-          
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {leftFeatures.map((feature, index) => (
               <ScrollAnimation key={index} variant="fadeInUp" delay={0.1 * (index)}>
                 <ShowcaseFeature {...feature} />

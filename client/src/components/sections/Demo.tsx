@@ -1,9 +1,7 @@
 import React from 'react';
 import { BoltIcon, ChartIcon, ResizeIcon } from '@/components/ui/icons';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import dashboardImage from '@/assets/images/dashboard.svg';
-import demoVideo from '@/assets/videos/demo-video.svg';
-import figproInterface from '@/assets/images/figpro-interface.png';
+import figproVideo from '@/assets/videos/figpro-demo.mov';
 
 interface DemoStatProps {
   icon: React.ReactNode;
@@ -64,12 +62,18 @@ const Demo = () => {
         
         <div className="mt-12 max-w-5xl mx-auto">
           <AspectRatio ratio={16 / 9} className="rounded-xl overflow-hidden shadow-lg">
-            <img src={figproInterface} alt="FigPro demonstration video" className="w-full h-full object-cover" />
+            <video 
+              controls 
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src={figproVideo} type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
           </AspectRatio>
-          
-          <div className="mt-12">
-            <img src={figproInterface} alt="FigPro dashboard" className="w-full h-auto rounded-xl shadow-lg" />
-          </div>
           
           <div className="mt-12 grid md:grid-cols-3 gap-8">
             {demoStats.map((stat, index) => (
