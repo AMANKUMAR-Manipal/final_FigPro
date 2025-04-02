@@ -1,6 +1,4 @@
-import { users, contacts, type User, type InsertUser, type Contact, type InsertContact } from "@shared/schema";
-import { eq } from "drizzle-orm";
-import { db } from "./db";
+import { type User, type InsertUser, type Contact, type InsertContact } from "@shared/schema";
 
 export interface IStorage {
   // User methods
@@ -13,32 +11,49 @@ export interface IStorage {
   getContacts(): Promise<Contact[]>;
 }
 
-export class PostgresStorage implements IStorage {
+export class MemStorage implements IStorage {
+  private users: User[] = [];
+  private contacts: Contact[] = [];
+  private userId = 1;
+  private contactId = 1;
+
   // User methods
   async getUser(id: number): Promise<User | undefined> {
-    const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
-    return result[0];
+    return this.users.find(user => user.id === id);
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    const result = await db.select().from(users).where(eq(users.username, username)).limit(1);
-    return result[0];
+    return this.users.find(user => user.username === username);
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const result = await db.insert(users).values(insertUser).returning();
-    return result[0];
+    const newUser: User = {
+      id: this.userId++,
+      ...insertUser
+    };
+    this.users.push(newUser);
+    return newUser;
   }
   
   // Contact methods
-  async createContact(contact: InsertContact): Promise<Contact> {
-    const result = await db.insert(contacts).values(contact).returning();
-    return result[0];
+  async createContact(contactData: InsertContact): Promise<Contact> {
+    const newContact: Contact = {
+      id: this.contactId++,
+      name: contactData.name,
+      email: contactData.email,
+      subject: contactData.subject,
+      message: contactData.message,
+      createdAt: new Date()
+    };
+    this.contacts.push(newContact);
+    return newContact;
   }
   
   async getContacts(): Promise<Contact[]> {
-    return db.select().from(contacts).orderBy(contacts.createdAt);
+    return [...this.contacts].sort((a, b) => 
+      new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+    );
   }
 }
 
-export const storage = new PostgresStorage();
+export const storage = new MemStorage();
