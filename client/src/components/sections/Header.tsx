@@ -44,9 +44,11 @@ const Header: React.FC = () => {
             <a href="#" className="hidden md:inline-flex text-sm font-medium text-slate-700 hover:text-primary transition-colors">
               Sign In
             </a>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
-              Get Started
-            </Button>
+            <a href="https://figpro-eight.vercel.app" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="bg-primary hover:bg-primary/90">
+                Get Started
+              </Button>
+            </a>
             
             {/* Mobile menu button */}
             <button 
@@ -68,6 +70,7 @@ const Header: React.FC = () => {
             <a href="#showcase" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-100">Showcase</a>
             <a href="#faq" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-100">FAQ</a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-100">Sign In</a>
+            <a href="https://figpro-eight.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-primary/90 hover:bg-slate-100">Get Started</a>
           </div>
         </div>
       </div>

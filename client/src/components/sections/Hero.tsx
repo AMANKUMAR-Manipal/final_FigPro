@@ -18,9 +18,11 @@ const Hero = () => {
               FigPro streamlines your design workflow with powerful accessibility features, intuitive controls, and seamless collaboration tools built for everyone.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Try for Free
-              </Button>
+              <a href="https://figpro-eight.vercel.app" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  Try for Free
+                </Button>
+              </a>
               <Button size="lg" variant="outline" className="flex items-center">
                 Watch Demo
                 <PlayIcon />
