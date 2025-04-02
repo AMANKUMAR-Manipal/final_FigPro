@@ -6,6 +6,17 @@ import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Get all contacts
+  app.get("/api/contacts", async (_req: Request, res: Response) => {
+    try {
+      const contacts = await storage.getContacts();
+      res.status(200).json(contacts);
+    } catch (error) {
+      console.error("Error retrieving contacts:", error);
+      res.status(500).json({ message: "Failed to retrieve contacts" });
+    }
+  });
+  
   // Contact form endpoint
   app.post("/api/contact", async (req: Request, res: Response) => {
     try {
