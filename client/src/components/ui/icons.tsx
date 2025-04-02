@@ -1,4 +1,5 @@
 import React from 'react';
+import figproIconPath from '../../assets/figpro-icon.png';
 
 export const UserAvatars = () => (
   <div className="flex -space-x-2">
@@ -22,8 +23,8 @@ export const UserAvatars = () => (
 
 // Icon Components
 export const Logo = ({ className }: { className?: string }) => (
-  <div className={`h-8 w-8 rounded-md bg-gradient-to-r from-primary to-[#ec4899] flex items-center justify-center text-white font-bold ${className}`}>
-    <span>FP</span>
+  <div className={`h-8 w-8 flex items-center justify-center ${className}`}>
+    <img src={figproIconPath} alt="FigPro Logo" className="h-full w-full object-contain" />
   </div>
 );
 
