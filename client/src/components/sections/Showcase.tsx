@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/icons';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import showcaseImage from '@/assets/images/showcase.svg';
+import figproInterface from '@/assets/images/figpro-interface.png';
 
 interface ShowcaseFeatureProps {
   icon: React.ReactNode;
@@ -99,7 +100,7 @@ const Showcase = () => {
           <ScrollAnimation variant="fadeIn" delay={0.2}>
             <div className="relative mb-16 max-w-4xl mx-auto">
               <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-                <img src={showcaseImage} alt="FigPro Professional Design Interface" className="w-full h-auto" />
+                <img src={figproInterface} alt="FigPro Professional Design Interface" className="w-full h-auto" />
               </div>
               <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
                 <div className="text-sm font-medium text-slate-900">Professional Design Interface</div>

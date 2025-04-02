@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { UserAvatars, PlayIcon } from '@/components/ui/icons';
 import heroImage from '@/assets/images/hero-image.svg';
+import figproInterface from '@/assets/images/figpro-interface.png';
 
 const Hero = () => {
   return (
@@ -35,7 +36,7 @@ const Hero = () => {
           <div className="flex-1 w-full lg:w-auto">
             <div className="relative rounded-xl overflow-hidden shadow-lg ring-1 ring-slate-200">
               <img 
-                src={heroImage} 
+                src={figproInterface} 
                 alt="FigPro Design Interface" 
                 className="w-full h-auto"
               />

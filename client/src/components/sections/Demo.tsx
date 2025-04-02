@@ -3,6 +3,7 @@ import { BoltIcon, ChartIcon, ResizeIcon } from '@/components/ui/icons';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import dashboardImage from '@/assets/images/dashboard.svg';
 import demoVideo from '@/assets/videos/demo-video.svg';
+import figproInterface from '@/assets/images/figpro-interface.png';
 
 interface DemoStatProps {
   icon: React.ReactNode;
@@ -63,11 +64,11 @@ const Demo = () => {
         
         <div className="mt-12 max-w-5xl mx-auto">
           <AspectRatio ratio={16 / 9} className="rounded-xl overflow-hidden shadow-lg">
-            <img src={demoVideo} alt="FigPro demonstration video" className="w-full h-full object-cover" />
+            <img src={figproInterface} alt="FigPro demonstration video" className="w-full h-full object-cover" />
           </AspectRatio>
           
           <div className="mt-12">
-            <img src={dashboardImage} alt="FigPro dashboard" className="w-full h-auto rounded-xl shadow-lg" />
+            <img src={figproInterface} alt="FigPro dashboard" className="w-full h-auto rounded-xl shadow-lg" />
           </div>
           
           <div className="mt-12 grid md:grid-cols-3 gap-8">

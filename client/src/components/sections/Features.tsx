@@ -11,6 +11,7 @@ import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import feature1Image from '@/assets/images/feature-1.svg';
 import feature2Image from '@/assets/images/feature-2.svg';
 import feature3Image from '@/assets/images/feature-3.svg';
+import figproInterface from '@/assets/images/figpro-interface.png';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -89,19 +90,19 @@ const Features = () => {
         <div className="mt-16 grid gap-8 grid-cols-1 lg:grid-cols-3">
           <ScrollAnimation variant="fadeInLeft" threshold={0.1}>
             <div className="flex flex-col items-center mb-12">
-              <img src={feature1Image} alt="Accessibility Tools" className="w-full max-w-md mx-auto mb-6" />
+              <img src={figproInterface} alt="Accessibility Tools" className="w-full max-w-md mx-auto mb-6 rounded-lg shadow-md" />
             </div>
           </ScrollAnimation>
           
           <ScrollAnimation variant="fadeIn" threshold={0.1} delay={0.1}>
             <div className="flex flex-col items-center mb-12">
-              <img src={feature2Image} alt="Component Libraries" className="w-full max-w-md mx-auto mb-6" />
+              <img src={figproInterface} alt="Component Libraries" className="w-full max-w-md mx-auto mb-6 rounded-lg shadow-md" />
             </div>
           </ScrollAnimation>
           
           <ScrollAnimation variant="fadeInRight" threshold={0.1} delay={0.2}>
             <div className="flex flex-col items-center mb-12">
-              <img src={feature3Image} alt="Real-time Collaboration" className="w-full max-w-md mx-auto mb-6" />
+              <img src={figproInterface} alt="Real-time Collaboration" className="w-full max-w-md mx-auto mb-6 rounded-lg shadow-md" />
             </div>
           </ScrollAnimation>
         </div>
