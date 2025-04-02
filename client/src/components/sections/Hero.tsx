@@ -1,8 +1,8 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { UserAvatars, PlayIcon } from '@/components/ui/icons';
-import heroImage from '@/assets/images/hero-image.svg';
-import figproInterface from '@/assets/images/figpro-interface.png';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { UserAvatars, PlayIcon } from "@/components/ui/icons";
+import heroImage from "@/assets/images/hero-image.svg";
+import figproInterface from "@/assets/images/figpro-interface.png";
 
 const Hero = () => {
   return (
@@ -12,19 +12,31 @@ const Hero = () => {
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
               <span className="block mb-2">The Accessible</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#ec4899]">Design Tool</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#ec4899]">
+                Design Tool
+              </span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0">
-              FigPro streamlines your design workflow with powerful accessibility features, intuitive controls, and seamless collaboration tools built for everyone.
+              FigPro streamlines your design workflow with powerful
+              accessibility features, intuitive controls, and seamless
+              collaboration tools built for everyone.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://figpro-eight.vercel.app" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://figpro-eight.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Try for Free
                 </Button>
               </a>
               <a href="#demo">
-                <Button size="lg" variant="outline" className="flex items-center">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="flex items-center"
+                >
                   Watch Demo
                   <PlayIcon />
                 </Button>
@@ -37,9 +49,9 @@ const Hero = () => {
           </div>
           <div className="flex-1 w-full lg:w-auto">
             <div className="relative rounded-xl overflow-hidden shadow-lg ring-1 ring-slate-200">
-              <img 
-                src={figproInterface} 
-                alt="FigPro Design Interface" 
+              <img
+                src={figproInterface}
+                alt="FigPro Design Interface"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end">
