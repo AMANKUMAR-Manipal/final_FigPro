@@ -76,36 +76,6 @@ const Contact = () => {
                 <p className="mt-4 text-lg text-slate-600">Have questions or need help? Our team is here for you.</p>
                 
                 <div className="mt-8 space-y-6">
-                  <ScrollAnimation variant="fadeInUp" delay={0.1}>
-                    <div className="flex">
-                      <div className="flex-shrink-0">
-                        <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                          <EnvelopeIcon />
-                        </div>
-                      </div>
-                      <div className="ml-4">
-                        <h3 className="text-lg font-medium text-slate-900">Email us</h3>
-                        <p className="mt-1 text-slate-600">Our support team will get back to you within 24 hours.</p>
-                        <a href="mailto:support@figpro.com" className="mt-2 inline-block text-sm font-medium text-primary hover:text-primary/80">support@figpro.com</a>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                  
-                  <ScrollAnimation variant="fadeInUp" delay={0.2}>
-                    <div className="flex">
-                      <div className="flex-shrink-0">
-                        <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                          <PhoneIcon />
-                        </div>
-                      </div>
-                      <div className="ml-4">
-                        <h3 className="text-lg font-medium text-slate-900">Call us</h3>
-                        <p className="mt-1 text-slate-600">Mon-Fri from 8am to 5pm.</p>
-                        <a href="tel:+1-555-123-4567" className="mt-2 inline-block text-sm font-medium text-primary hover:text-primary/80">+1 (555) 123-4567</a>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                  
                   <ScrollAnimation variant="fadeInUp" delay={0.3}>
                     <div className="flex">
                       <div className="flex-shrink-0">
@@ -116,7 +86,7 @@ const Contact = () => {
                       <div className="ml-4">
                         <h3 className="text-lg font-medium text-slate-900">Visit us</h3>
                         <p className="mt-1 text-slate-600">Come say hello at our office.</p>
-                        <p className="mt-2 text-sm text-slate-600">123 Design Avenue<br />San Francisco, CA 94107</p>
+                        <p className="mt-2 text-sm text-slate-600">42 Innovation Hub<br />Bangalore, Karnataka 560001<br />India</p>
                       </div>
                     </div>
                   </ScrollAnimation>

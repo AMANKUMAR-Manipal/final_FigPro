@@ -23,10 +23,12 @@ const Hero = () => {
                   Try for Free
                 </Button>
               </a>
-              <Button size="lg" variant="outline" className="flex items-center">
-                Watch Demo
-                <PlayIcon />
-              </Button>
+              <a href="#demo">
+                <Button size="lg" variant="outline" className="flex items-center">
+                  Watch Demo
+                  <PlayIcon />
+                </Button>
+              </a>
             </div>
             <div className="mt-8 text-slate-500 flex justify-center lg:justify-start items-center">
               <UserAvatars />

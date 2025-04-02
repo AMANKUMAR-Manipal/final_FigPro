@@ -12,21 +12,21 @@ interface ComparisonFeature {
 const comparisonFeatures: ComparisonFeature[] = [
   {
     feature: "Accessibility Toolkit",
-    figpro: <span className="text-green-500"><CheckIcon /></span>,
-    competitorA: <span className="text-red-500"><XIcon /></span>,
+    figpro: <div className="flex justify-center"><span className="text-green-500"><CheckIcon /></span></div>,
+    competitorA: <div className="flex justify-center"><span className="text-red-500"><XIcon /></span></div>,
     competitorB: <span className="text-slate-400">Limited</span>
   },
   {
     feature: "AI-Powered Design",
-    figpro: <span className="text-green-500"><CheckIcon /></span>,
+    figpro: <div className="flex justify-center"><span className="text-green-500"><CheckIcon /></span></div>,
     competitorA: <span className="text-slate-400">Limited</span>,
     competitorB: <span className="text-slate-400">Basic</span>
   },
   {
     feature: "Real-time Collaboration",
-    figpro: <span className="text-green-500"><CheckIcon /></span>,
-    competitorA: <span className="text-green-500"><CheckIcon /></span>,
-    competitorB: <span className="text-red-500"><XIcon /></span>
+    figpro: <div className="flex justify-center"><span className="text-green-500"><CheckIcon /></span></div>,
+    competitorA: <div className="flex justify-center"><span className="text-green-500"><CheckIcon /></span></div>,
+    competitorB: <div className="flex justify-center"><span className="text-red-500"><XIcon /></span></div>
   },
   {
     feature: "Code Export",
