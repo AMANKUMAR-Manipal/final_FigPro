@@ -1,20 +1,8 @@
 import React from 'react';
 import { BoltIcon, ChartIcon, ResizeIcon } from '@/components/ui/icons';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
-// Mock video placeholder
-const VideoPlaceholder = () => (
-  <div className="w-full h-full flex items-center justify-center bg-slate-800 rounded-xl">
-    <div className="text-white flex flex-col items-center justify-center">
-      <div className="h-16 w-16 rounded-full bg-white/20 flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M8 5v14l11-7z" />
-        </svg>
-      </div>
-      <p className="mt-4 text-white/80">Watch the demo video</p>
-    </div>
-  </div>
-);
+import dashboardImage from '@/assets/images/dashboard.svg';
+import demoVideo from '@/assets/videos/demo-video.svg';
 
 interface DemoStatProps {
   icon: React.ReactNode;
@@ -74,9 +62,13 @@ const Demo = () => {
         </div>
         
         <div className="mt-12 max-w-5xl mx-auto">
-          <AspectRatio ratio={16 / 9} className="bg-slate-800 rounded-xl overflow-hidden shadow-lg">
-            <VideoPlaceholder />
+          <AspectRatio ratio={16 / 9} className="rounded-xl overflow-hidden shadow-lg">
+            <img src={demoVideo} alt="FigPro demonstration video" className="w-full h-full object-cover" />
           </AspectRatio>
+          
+          <div className="mt-12">
+            <img src={dashboardImage} alt="FigPro dashboard" className="w-full h-auto rounded-xl shadow-lg" />
+          </div>
           
           <div className="mt-12 grid md:grid-cols-3 gap-8">
             {demoStats.map((stat, index) => (

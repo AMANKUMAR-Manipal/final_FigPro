@@ -1,0 +1,60 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f4f8"/>
+  
+  <!-- Layered UI showcase -->
+  <g transform="translate(400, 250)">
+    <!-- Background layers -->
+    <rect x="-350" y="-200" width="700" height="400" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <!-- Toolbar -->
+    <rect x="-350" y="-200" width="700" height="50" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="-320" cy="-175" r="10" fill="#ef4444"/>
+    <circle cx="-290" cy="-175" r="10" fill="#f59e0b"/>
+    <circle cx="-260" cy="-175" r="10" fill="#10b981"/>
+    
+    <!-- Tool icons -->
+    <rect x="-150" y="-190" width="300" height="30" rx="15" fill="#f1f5f9"/>
+    <circle cx="-115" cy="-175" r="10" stroke="#64748b" stroke-width="2" fill="none"/>
+    <circle cx="-75" cy="-175" r="10" stroke="#64748b" stroke-width="2" fill="none"/>
+    <rect x="-35" cy="-185" width="20" height="20" stroke="#64748b" stroke-width="2" fill="none"/>
+    <path d="M5,-185 L25,-165 M5,-165 L25,-185" stroke="#64748b" stroke-width="2"/>
+    <path d="M45,-175 L65,-175 M55,-185 L55,-165" stroke="#64748b" stroke-width="2"/>
+    <path d="M85,-185 L105,-165 M85,-165 L105,-185" stroke="#64748b" stroke-width="2"/>
+    
+    <!-- Sidebar -->
+    <rect x="-350" y="-150" width="150" height="350" fill="#f8fafc"/>
+    <rect x="-330" y="-130" width="110" height="25" rx="4" fill="#3b82f6" opacity="0.2"/>
+    <rect x="-330" y="-90" width="110" height="25" rx="4" fill="#f1f5f9"/>
+    <rect x="-330" y="-50" width="110" height="25" rx="4" fill="#f1f5f9"/>
+    <rect x="-330" y="-10" width="110" height="25" rx="4" fill="#f1f5f9"/>
+    <rect x="-330" y="30" width="110" height="25" rx="4" fill="#f1f5f9"/>
+    
+    <!-- Canvas area -->
+    <rect x="-180" y="-130" width="510" height="310" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Design elements on canvas -->
+    <rect x="-60" y="-80" width="270" height="180" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="-40" y="-60" width="230" height="30" rx="4" fill="#f1f5f9"/>
+    <rect x="-40" y="-20" width="100" height="100" rx="4" fill="#3b82f6" opacity="0.2"/>
+    <rect x="70" y="-20" width="120" height="20" rx="2" fill="#94a3b8"/>
+    <rect x="70" y="10" width="100" height="20" rx="2" fill="#94a3b8"/>
+    <rect x="70" y="40" width="80" height="20" rx="2" fill="#94a3b8"/>
+    <rect x="-40" y="90" width="230" height="20" rx="4" fill="#f1f5f9"/>
+    
+    <!-- Selection handles and guides -->
+    <rect x="-60" y="-80" width="270" height="180" rx="8" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+    <rect x="-65" y="-85" width="10" height="10" fill="#3b82f6"/>
+    <rect x="205" y="-85" width="10" height="10" fill="#3b82f6"/>
+    <rect x="-65" y="95" width="10" height="10" fill="#3b82f6"/>
+    <rect x="205" y="95" width="10" height="10" fill="#3b82f6"/>
+    
+    <!-- Property panel -->
+    <rect x="50" y="130" width="280" height="40" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="70" y="155" font-family="Arial" font-size="12" fill="#64748b">Width: 270px</text>
+    <text x="170" y="155" font-family="Arial" font-size="12" fill="#64748b">Height: 180px</text>
+    <text x="270" y="155" font-family="Arial" font-size="12" fill="#64748b">R: 8px</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#334155" text-anchor="middle">FigPro Professional Design Interface</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f4f8"/>
+  
+  <!-- Video frame -->
+  <rect x="50" y="50" width="700" height="350" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Video player controls -->
+  <rect x="50" y="350" width="700" height="50" rx="0" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Play button -->
+  <circle cx="85" cy="375" r="15" fill="#3b82f6"/>
+  <path d="M80,368 L95,375 L80,382 Z" fill="#ffffff"/>
+  
+  <!-- Progress bar -->
+  <rect x="120" y="373" width="500" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="120" y="373" width="200" height="4" rx="2" fill="#3b82f6"/>
+  
+  <!-- Time display -->
+  <text x="650" y="378" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">02:14 / 05:36</text>
+  
+  <!-- Video content placeholder -->
+  <rect x="100" y="100" width="600" height="200" fill="#f1f5f9"/>
+  <text x="400" y="200" font-family="Arial" font-size="18" fill="#64748b" text-anchor="middle">FigPro Demonstration Video</text>
+  <text x="400" y="230" font-family="Arial" font-size="14" fill="#94a3b8" text-anchor="middle">Click to play</text>
+  
+  <!-- Big play button overlay -->
+  <circle cx="400" cy="175" r="40" fill="#3b82f6" opacity="0.9"/>
+  <path d="M385,155 L425,175 L385,195 Z" fill="#ffffff"/>
+</svg>

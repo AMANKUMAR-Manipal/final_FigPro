@@ -8,6 +8,9 @@ import {
   MobileIcon 
 } from '@/components/ui/icons';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
+import feature1Image from '@/assets/images/feature-1.svg';
+import feature2Image from '@/assets/images/feature-2.svg';
+import feature3Image from '@/assets/images/feature-3.svg';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -83,7 +86,27 @@ const Features = () => {
           </div>
         </ScrollAnimation>
         
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-8 grid-cols-1 lg:grid-cols-3">
+          <ScrollAnimation variant="fadeInLeft" threshold={0.1}>
+            <div className="flex flex-col items-center mb-12">
+              <img src={feature1Image} alt="Accessibility Tools" className="w-full max-w-md mx-auto mb-6" />
+            </div>
+          </ScrollAnimation>
+          
+          <ScrollAnimation variant="fadeIn" threshold={0.1} delay={0.1}>
+            <div className="flex flex-col items-center mb-12">
+              <img src={feature2Image} alt="Component Libraries" className="w-full max-w-md mx-auto mb-6" />
+            </div>
+          </ScrollAnimation>
+          
+          <ScrollAnimation variant="fadeInRight" threshold={0.1} delay={0.2}>
+            <div className="flex flex-col items-center mb-12">
+              <img src={feature3Image} alt="Real-time Collaboration" className="w-full max-w-md mx-auto mb-6" />
+            </div>
+          </ScrollAnimation>
+        </div>
+        
+        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <ScrollAnimation 
               key={index} 

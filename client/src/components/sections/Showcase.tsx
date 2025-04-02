@@ -8,6 +8,7 @@ import {
   ExportIcon 
 } from '@/components/ui/icons';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
+import showcaseImage from '@/assets/images/showcase.svg';
 
 interface ShowcaseFeatureProps {
   icon: React.ReactNode;
@@ -33,42 +34,7 @@ const ShowcaseFeature: React.FC<ShowcaseFeatureProps> = ({ icon, title, descript
   </div>
 );
 
-// Mock interface screenshots with SVG placeholders
-const InterfaceScreenshot1 = () => (
-  <svg 
-    viewBox="0 0 500 300" 
-    className="w-full h-auto" 
-    fill="none" 
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect width="500" height="300" rx="8" fill="#F1F5F9" />
-    <rect x="20" y="20" width="460" height="260" rx="4" fill="#E2E8F0" />
-    <rect x="40" y="40" width="120" height="220" rx="4" fill="#CBD5E1" />
-    <rect x="180" y="40" width="300" height="40" rx="4" fill="#94A3B8" />
-    <rect x="180" y="100" width="300" height="160" rx="4" fill="#CBD5E1" />
-    <circle cx="50" cy="30" r="6" fill="#EF4444" />
-    <circle cx="70" cy="30" r="6" fill="#F59E0B" />
-    <circle cx="90" cy="30" r="6" fill="#10B981" />
-  </svg>
-);
 
-const InterfaceScreenshot2 = () => (
-  <svg 
-    viewBox="0 0 500 300" 
-    className="w-full h-auto" 
-    fill="none" 
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect width="500" height="300" rx="8" fill="#F1F5F9" />
-    <rect x="20" y="20" width="460" height="260" rx="4" fill="#E2E8F0" />
-    <rect x="40" y="40" width="420" height="40" rx="4" fill="#94A3B8" />
-    <rect x="40" y="100" width="200" height="160" rx="4" fill="#CBD5E1" />
-    <rect x="260" y="100" width="200" height="160" rx="4" fill="#94A3B8" />
-    <circle cx="50" cy="30" r="6" fill="#EF4444" />
-    <circle cx="70" cy="30" r="6" fill="#F59E0B" />
-    <circle cx="90" cy="30" r="6" fill="#10B981" />
-  </svg>
-);
 
 const leftFeatures: ShowcaseFeatureProps[] = [
   {
@@ -130,48 +96,30 @@ const Showcase = () => {
         </ScrollAnimation>
         
         <div className="mt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <ScrollAnimation variant="fadeInLeft" delay={0.2}>
-              <div className="relative">
-                <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-                  <InterfaceScreenshot1 />
-                </div>
-                <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
-                  <div className="text-sm font-medium text-slate-900">Smart Components Panel</div>
-                  <div className="text-xs text-slate-500">Drag & drop interface with AI-powered suggestions</div>
-                </div>
+          <ScrollAnimation variant="fadeIn" delay={0.2}>
+            <div className="relative mb-16 max-w-4xl mx-auto">
+              <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+                <img src={showcaseImage} alt="FigPro Professional Design Interface" className="w-full h-auto" />
               </div>
-            </ScrollAnimation>
-            
-            <div className="flex flex-col justify-center space-y-8">
-              {leftFeatures.map((feature, index) => (
-                <ScrollAnimation key={index} variant="fadeInRight" delay={0.1 * (index + 1)}>
-                  <ShowcaseFeature {...feature} />
-                </ScrollAnimation>
-              ))}
+              <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
+                <div className="text-sm font-medium text-slate-900">Professional Design Interface</div>
+                <div className="text-xs text-slate-500">Complete toolset for modern design workflows</div>
+              </div>
             </div>
-          </div>
+          </ScrollAnimation>
           
-          <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="flex flex-col justify-center space-y-8 order-2 lg:order-1">
-              {rightFeatures.map((feature, index) => (
-                <ScrollAnimation key={index} variant="fadeInLeft" delay={0.1 * (index + 1)}>
-                  <ShowcaseFeature {...feature} />
-                </ScrollAnimation>
-              ))}
-            </div>
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {leftFeatures.map((feature, index) => (
+              <ScrollAnimation key={index} variant="fadeInUp" delay={0.1 * (index)}>
+                <ShowcaseFeature {...feature} />
+              </ScrollAnimation>
+            ))}
             
-            <ScrollAnimation variant="fadeInRight" delay={0.2} className="order-1 lg:order-2">
-              <div className="relative">
-                <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-                  <InterfaceScreenshot2 />
-                </div>
-                <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg">
-                  <div className="text-sm font-medium text-slate-900">Accessibility Toolkit</div>
-                  <div className="text-xs text-slate-500">Real-time accessibility checks and suggestions</div>
-                </div>
-              </div>
-            </ScrollAnimation>
+            {rightFeatures.map((feature, index) => (
+              <ScrollAnimation key={index + leftFeatures.length} variant="fadeInUp" delay={0.1 * (index + leftFeatures.length)}>
+                <ShowcaseFeature {...feature} />
+              </ScrollAnimation>
+            ))}
           </div>
         </div>
       </div>
