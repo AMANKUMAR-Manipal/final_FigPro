@@ -86,7 +86,7 @@ const Contact = () => {
                       <div className="ml-4">
                         <h3 className="text-lg font-medium text-slate-900">Visit us</h3>
                         <p className="mt-1 text-slate-600">Come say hello at our office.</p>
-                        <p className="mt-2 text-sm text-slate-600">42 Innovation Hub<br />Bangalore, Karnataka 560001<br />India</p>
+                        <p className="mt-2 text-sm text-slate-600">MUJ<br />Jaipur , Rajastan<br />India</p>
                       </div>
                     </div>
                   </ScrollAnimation>
